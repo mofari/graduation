@@ -135,18 +135,8 @@
                 android:layout_marginLeft="20dp"
                 android:text="비밀번호 찾기"/>
 
-
-
         </LinearLayout>
-
-
-
-
     </LinearLayout>
-
-
-
-
 </RelativeLayout>
 
 

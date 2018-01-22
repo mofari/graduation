@@ -14,6 +14,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(MainActivity.this,"테스트입니다",Toast.LENGTH_SHORT).show();
     }
 }
