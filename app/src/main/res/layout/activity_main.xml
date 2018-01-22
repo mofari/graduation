@@ -45,12 +45,6 @@
             android:paddingLeft="45dp"
             android:orientation="horizontal">
 
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="테스트입니다"
-                android:textColor="#111111"/>
 
 
             <TextView
