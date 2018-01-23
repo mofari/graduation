@@ -19,10 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Signup" />
-        <activity android:name=".MainActivity" />
         <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
+            android:name=".ND_Menu"
+            android:label="@string/title_activity_nd__menu"
             android:theme="@style/AppTheme"></activity>
     </application>
 

@@ -130,7 +130,7 @@ public class Signup extends AppCompatActivity {
                     }
                     else {
                         new signup().execute(id, pw, name, major1, phone_number);
-                        Intent intent = new Intent(Signup.this, MainActivity.class);
+                        Intent intent = new Intent(Signup.this, ND_Menu.class);
                         startActivity(intent);
                         finish();
                     }

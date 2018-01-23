@@ -90,7 +90,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_complete"
+                android:id="@+id/bt_login"
                 android:text="로그인"
                 android:textColor="#ffffff"
                 android:background="#1b1b1b"/>

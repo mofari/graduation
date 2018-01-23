@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/main"
+            android:title="Main" />
+        <item
+            android:id="@+id/nav_bookdeal"
+            android:icon="@drawable/book"
+            android:title="중고 거래장터" />
+        <item
+            android:id="@+id/nav_taxi"
+            android:icon="@drawable/taxi2"
+            android:title="동반자" />
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/food2"
+            android:title="주변 음식점" />
+    </group>
+
+    <item android:title="Communicate">
+        <group>
+        <menu>
+            <item
+                android:id="@+id/nav_mypage"
+                android:icon="@drawable/mypage2"
+                android:title="마이페이지" />
+            <item
+                android:id="@+id/nav_qna"
+                android:icon="@drawable/qna2"
+                android:title="QnA" />
+        </menu>
+        </group>
+    </item>
+
+</menu>
