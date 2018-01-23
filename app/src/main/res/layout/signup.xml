@@ -6,7 +6,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="120dp"
+        android:paddingLeft="145dp"
         android:paddingTop="40dp">
 
     <ImageView
@@ -132,6 +132,7 @@
             android:inputType="text"
             android:textSize="15dp"/>
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
