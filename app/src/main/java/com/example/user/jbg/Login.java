@@ -146,7 +146,7 @@ public class Login extends AppCompatActivity {
         }
 
         protected void onPostExecute(String result) {
-            Toast.makeText(Login.this,"result : "+result,Toast.LENGTH_LONG).show();
+            //Toast.makeText(Login.this,"result : "+result,Toast.LENGTH_LONG).show();
             try {
                 JSONArray jsonarray = new JSONArray(result.toString());
 
