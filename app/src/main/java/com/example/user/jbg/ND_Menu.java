@@ -1,5 +1,6 @@
 package com.example.user.jbg;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,16 +13,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class ND_Menu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    String id;
+    TextView tv_id;
+    ImageView img_bookdeal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nd__menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        img_bookdeal = (ImageView)findViewById(R.id.img_bookdeal);
+        //tv_id = (TextView)findViewById(R.id.tv_id);
         setSupportActionBar(toolbar);
+
+        Intent intent = getIntent();
+        id = intent.getStringExtra("id");
+        Toast.makeText(ND_Menu.this,"id : "+id,Toast.LENGTH_SHORT).show();
+
+        //tv_id.setText(id);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -31,6 +47,15 @@ public class ND_Menu extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        img_bookdeal.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(ND_Menu.this,BookDeal.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override
@@ -74,7 +99,9 @@ public class ND_Menu extends AppCompatActivity
         if (id == R.id.nav_main) {
             // Handle the camera action
         } else if (id == R.id.nav_bookdeal) {
-
+            Intent intent = new Intent(ND_Menu.this,BookDeal.class);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_food) {
 
         } else if (id == R.id.nav_taxi) {

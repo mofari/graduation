@@ -114,4 +114,6 @@
                 android:textColor="#111111" />
         </LinearLayout>
     </LinearLayout>
+
+    <include layout="@layout/app_bar_nd__menu" />
 </android.support.constraint.ConstraintLayout>
