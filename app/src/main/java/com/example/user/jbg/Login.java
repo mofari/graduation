@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -56,9 +57,8 @@ public class Login extends AppCompatActivity {
                     pw = et_log_pw.getText().toString();
 
                     new login().execute(id, pw);
-                    Intent intent = new Intent(Login.this, ND_Menu.class);
-                    startActivity(intent);
-                    finish();
+
+
                 }
             }
         });
@@ -148,13 +148,20 @@ public class Login extends AppCompatActivity {
         protected void onPostExecute(String result) {
             Toast.makeText(Login.this,"result : "+result,Toast.LENGTH_LONG).show();
             try {
-                //JSONObject jsonObject = new JSONObject(result.toString());
-                JSONObject obj = new JSONObject(result);
+                JSONArray jsonarray = new JSONArray(result.toString());
 
-                phpresult = obj.getString("result");
+                for (int a = 0; a < jsonarray.length(); a++){
+                    JSONObject jsonObject = jsonarray.getJSONObject(a);
+
+                    phpresult = jsonObject.getString("result");
+                }
 
                 if (phpresult.contains("true")){
                     Toast.makeText(Login.this, "로그인 성공",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Login.this, ND_Menu.class);
+                    startActivity(intent);
+                    finish();
+
                 } else {
                     Toast.makeText(Login.this, "아이디 또는 비밀번호를 다시 입력해 주세요.",Toast.LENGTH_LONG).show();
                 }
